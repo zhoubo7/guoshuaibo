@@ -1,0 +1,104 @@
+<!-- text-align 文本对齐方式
+left左对齐
+right右对齐
+center 居中对齐
+justify 内容两端对齐
+只有一行显示的时候，左右对齐：
+方法一：在内容中添加一个占位标签
+方法二：使用：after伪元素（ie7及以下不支持伪类）
+方法三：使用text-align-last:justify属性
+终极兼容方法：text-align:justify
+text-align-last:justify
+（1）注意每个单词之间都有空格，这个很重要，很重要，很重要，而
+且只需一个空格就行，多个空格也不影响。如果没有这个空格，兼容
+性很差，基本只有谷歌和火狐支持。
+（2）这个用法兼容ie7及以上，还有其它的浏览器。ie6没测，所以不
+敢下结论。
+（3）多行内容也可以使用同样的方法，只是最后一行如果不去加空
+格，还是不会处理，只是默认的往左对齐。
+（4）li 这个标签要设置 list-style: none; 去掉默认属性，否则当只有一行
+的时候，会出现并没有左右两端对齐，而是类似右对齐的bug。。。 -->
+<!-- text-indent:文本首行缩进
+text-decoration:文本装饰
+text-decoration-line:文本装饰的种类
+none  :默认值 无
+underline：下划线
+overline：上划线
+line-through：贯穿线
+text-decoration-style:文本装饰的样式
+soild：默认值 实线
+double：双线
+dotted：点线
+wavy：波浪线
+text-decoration-color:文本装饰的颜色 -->
+<!-- text-indent 文本首行缩进
+px
+rem
+em
+text-overflow
+1.clip 不显示省略号 ，简单的裁剪
+2.ellipsis 显示省略号代替裁剪的部分
+ 单行文本省略号
+核心css代码如下
+1、overflow:hidden; （顾名思义超出限定的宽度就隐藏内容）
+2、white-space: nowrap; （设置文字在一行显示不能换行）
+3、text-overflow: ellipsis;（规定当文本溢出时显示省略符号来代表
+被修剪的文本）
+多行文本省略号
+核心css代码如下
+1、-webkit-line-clamp:2; （用来限制在一个块元素显示的文本的行
+数,2表示最多显示2行。 为了实现该效果，它需要组合其他的WebKit属
+性）
+2、display: -webkit-box; （和1结合使用，将对象作为弹性伸缩盒子
+模型显示 ）
+3、-webkit-box-orient:vertical;（ 和1结合使用 ，设置或检索伸缩盒
+对象的子元素的排列方式 。）
+4、overflow:hidden; （顾名思义超出限定 的宽度就隐藏内容）
+5、text-overflow: ellipsis;（规定当文本溢出时显示省略符号来代表
+被修剪的文本） -->
+<!-- 显示几行 
+-webkit-line-clamp: 3;
+ 弹性盒
+display: -webkit-box;
+ 子元素垂直排列 
+-webkit-box-orient: vertical;
+溢出隐藏 
+overflow: hidden; -->
+<!-- 文字的大小写转换  text-transform 
+none 默认， 不转换
+uppercase  转为大写
+lowercase  转为小写
+capitalize （单词）首字母大写
+white-space:针对空格处理：
+normal：默认，合并空格，多个空格合成一格
+！nowrap：强制不换行
+pre：保留空格也保留换行 ，遇边界不换行
+pre-wrap:保留空格和换行
+pre-line：合并空格和换行
+vertical-align 垂直 对齐
+！middle:将支持valign特性的对象内容与对象中部对齐
+baseline:将支持valign特性的对象内容与基线对齐
+sub:垂直对齐文本的下标
+super：垂直对齐文本的上标
+top：将支持valign特性的对象内容与对象顶端对齐
+text-top：将支持valign特性的对象文本与对象顶端对齐
+bottom：将支持valign特性的对象文本与对象底端对齐
+text-bottom：将支持valign特性的对象文本与对象底端对齐
+word-break:文本换行行为
+normal：允许换行
+keep-all：不允许换行
+breek-all：强制换行
+writing-mode：书写模式
+vertical-lr:垂直方式左——右
+vertical-rl:垂直方式右——左
+horizontal-tb:水平方式
+line-height：行高
+
+单行文本省略号：
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+vertical-align  垂直对齐方式
+1引入链接
+2 标签 class='icon iconfont icon-xxxx'
+                     -->

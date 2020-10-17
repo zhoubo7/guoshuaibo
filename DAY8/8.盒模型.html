@@ -1,0 +1,54 @@
+<!-- 盒模型组成：由里向外content,padding,border,margin.
+一、 border【边框】
+边框有三要素：宽度、颜色、样式：
+三要素拆分写法
+border-color:red;
+Border-width:10px;
+Border-style:
+
+方向的拆分写法：
+border-top  上边框
+border-bottom  下边框
+border-left  左边框
+border-right  右边框
+综合写法：border:solid 10px red;(三要素的顺序是可以换的)
+实心三角形写法：
+Div{
+Width:0px;
+Height:0px;
+Border:solid 10px transparent;
+Border-top-color:red;
+}
+padding 内边距
+语法：	padding:30px;表示上下左右四个方向都为30px
+padding:30px 10px;表示上下为30px左右为10px
+padding:30px 10px 20px;表示上为30px左右为20px 下为20px
+padding:30px 10px 20px 40px;表示上右下左 顺时针30px\10px\20px\40px;
+小结：当我们设置来padding后可以发现，元素自身的宽高发生了变化，
+所以可以认为“padding可以撑大自身”
+Margin 外边距
+语法：margin:30px;表示上下左右四个方向都为30px
+margin:30px 10px;表示上下为30px左右为10px
+margin:30px 10px 20px;表示上为30px左右为20px 下为20px
+margin:30px 10px 20px 40px;表示上右下左 顺时针30px\10px\20px\40px;
+关于margin还有许多小问题：
+margin溢出重叠问题：子元素设置margin-top导致父元素下移的问题
+解决方案1:给父元素设置overflow:hidden(BFC原理)
+解决方案2:给父元素设置 padding
+解决方案3:给父元素设置border
+margin重叠效应
+问题：上下两个相邻元素设置margin有一方不生效？？
+解决方案：设置一个margin方向即可
+当margin值都为正数或者负数时，取绝对值对大的那一方
+当margin值有正数也有负数时，取两个值相加的结果
+
+margin水平居中
+子元素设置margin:0 auto;即可让该元素水平居中于父元素
+【注：*{margin:0;padding:0;},可解决浏览器默认间距、消除ul等标签的默认间距】
+IE盒模型（怪异盒模型）：
+Width=width+padding(left/right)+border(left/right)
+height=height+padding(top/bottom)+border(top/bottom)
+标准盒模型：width/height = content
+box-sizing:content-box  转为ie盒模型
+box-sizing:border-box  转为标准盒模型
+ -->

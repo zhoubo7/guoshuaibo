@@ -1,0 +1,67 @@
+<!-- CSS3详解：
+transform CSS3
+ transform是什么？
+transform的含义是：改变，使…变形；转换
+CSS3 transform都有哪些常用属性？
+transform的属性包括：rotate() / skew() / scale() / translate(,) ，分别还有x、y之分，
+比如：rotatex() 和 rotatey() ，以此类 推。
+下面我们来分解各个属性的用法：
+transform:rotate()： 含义：旋转；其中“deg”是“度”的意思，如“10deg”表示“10度”下同。
+transform:skew()： 含义：倾斜；其中“deg”是“度”的意思，如“10deg”表示“10度”下同。
+transform:scale()： 含义：比例；“1.5”表示以1.5的比例放大，
+如果要放大2倍，须写成“2.0”，大于 1.0则放大，小于1.0则缩小。
+transform:translate()： 含义：变动，位移；
+如下表示向右位移120像素，如果向上位移，把后面的“0”改 个值就行，向左向下位移则为负“‑”。
+改变元素基点transform‑origin 
+前面我们多次提到transform‑origin这个东东，
+他的主要作用就是让我们在进 行transform动作之前可以改变元素的基点位置，
+因为我们元素默认基点就是 其中心位置，
+换句话说我们没有使用transform‑origin改变元素基点位置的情 况下，
+transform进行的rotate,translate,scale,skew,matrix等操作都是以元素自 己中心位置进行变化的。
+但有时候我们需要在不同的位置对元素进行这些操作，
+那么我们就可以使用transform‑origin来对元素进行基点位置改变，使元 素基点不在是中心位置，
+以达到你需要的基点位置。
+下面我们主要来看看其 使用规则：
+transform‑origin(X,Y):用来设置元素的运动的基点（参照点）。
+默认点是元素 的中心点。
+其中X和Y的值可以是百分值,em,px，其中X也可以是字符参数值 leȨ,center,right；
+Y和X一样除了百分值外还可以设置字符值 top,center,bottom，这个看上去有点像我们background‑position设置一样； 
+下面我列出他们相对应的写法：
+1、top leȨ | leȨ top 等价于 0 0 | 0% 0% 
+2、top | top center | center top 等价于 50% 0 
+3、right top | top right 等价于 100% 0 
+4、leȨ | leȨ center | center leȨ 等价于 0 50% | 0% 50% 
+5、center | center center 等价于 50% 50%（默认值）
+6、right | right center | center right 等价于 100% 50% 
+7、bottom leȨ | leȨ bottom 等价于 0 100% | 0% 100% 
+8、bottom | bottom center | center bottom 等价于 50% 100%
+9、bottom right | right bottom 等价于 100% 100%
+注意！ 同样的transform在IE9下版本是无法兼容的
+transition应用于实现简单的平滑过渡的动画(必须触发滑动的事件才能执 行):hover{}
+动画默认执行的次数是一次 动画默认执行的时长是0秒 
+第一个参数表示对哪一个属性进行过渡 
+all表示所有的属性同时执行动画
+第二个参数表示过渡的时长 ，必须以s为单位
+可以对多个属性同时执行动画，用逗号隔开 
+第三个参数表示过渡的类型（过渡方法，过渡方式）：linear表示匀速运动
+第四个参数表示delay延迟时长
+transition‑property表示第一个参数（跟要过渡的属性） 
+transition‑duration第二个参数（跟具体时长，单位是秒s) 
+transition‑timing‑function表示第三个参数（指过度的方式） 
+transition‑delay第四个参数
+linear 动画从头到尾的速度是相同的(匀速)。 
+ease 默认。动画以低速开始，然后加快，在结束前变慢。 
+ease‑in 动画以低速开始(由慢到快)。 
+ease‑out 动画以低速结束。 
+ease‑in‑out 动画以低速开始和结束。 
+transform用于实现变形 
+rotate用于表示旋转（50deg）,deg表度数 
+skew用于倾斜（扭曲），
+skew(30deg,50deg)第一个参数表示X轴，第二个参 数表示Y轴 
+skew(30deg)默认为X轴的扭曲 skewY(30deg)表示Y轴的倾斜度 
+scale用于表示缩放
+scale（2,0.5）宽为原来的2倍，高为原来的一半 默认为等比例缩放
+scale（2）水平和垂直都为原来的2倍 
+translate用于实现位移 translate（200px）默认为水平位移200px 
+平滑过渡也可以完成变形的效果 
+transform 是单一动画，太过生硬，所以用到了transition去过渡 -->

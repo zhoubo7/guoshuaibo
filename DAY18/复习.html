@@ -1,0 +1,179 @@
+<!-- 标签：
+块：div（盒子标签） ul li（无序列表） ol li（有序列表） h1-h6（标题） p(段落）
+ dl（自定义列表） dt(放置标题和图片) dd（关于标题图片的内容/文字）
+行内：span a（超链接标签） img图片） em/i（倾斜标签） del/s（删除线标签）
+ strong/b(加粗标签) ins/u（下划线标签） sup（上标文本） 
+ href （跳转路径）: link(引入外链) a（超链接）
+<a target（新页面在何处打开窗口）='_self（在当前页面打开）/_blank（新窗口打开）'></a>
+url（图片路径） : img background-image（背景图片）
+样式：
+可以继承的样式 width （宽） font（字体） line-height（行高） text-（文本）
+不可继承样式 height（高） background（背景） position（定位） box.....
+
+font-size（大小）/weight（粗细）/family（系列）/style（样式） ,color（颜色） 
+line-height （行高）： 具体大小/ 百分比， 相对于字体大小 
+单多行文本省略号：
+单：
+white-space:nowrap;设置文本在一行显示不能换行
+overflow:hidden;   文本溢出隐藏
+text-overflow:ellipsis;文本溢出裁剪显示省略号
+多：
+多行文本省略号：
+-webkit-line-clamp:2;  限制文本显示行数 最多两行
+display:-webkit-box;   设为弹性盒显示
+-webkit-box-orient: vertical; 子元素垂直排列
+overflow:hidden;   文本溢出隐藏
+text-overflow:ellipsis;文本溢出裁剪显示省略号
+
+text-indent : 文本缩进 
+text-decoration 文本装饰 
+-line（种类 none underline 下划线 overline 上划线 line-through 贯穿线）
+-style（样式  solid 默认实线 double 双线 dotted 点线 wavy 波浪线  ）
+-color（颜色 ）
+background（背景）: background-color（颜色）/ iamge（图片）
+/repeat（平铺）/position（定位）/size（大小） /attachment（固定）/origin（源点）/clip（裁剪）
+盒模型包括： content （内容）+ padding（内边距）+margin（外边距）+border（边框） 上右下左
+盒模型有两种： 标准（box-sizing:border-box） 、 怪异（IE）box-sizing:content-box
+margin 问题 溢出重叠
+子margin-top 父元素下移 ： overflow:hidden;border:solid 1px transparent; padding:;
+上下两个盒子设置margin 会重叠： 正/ 负数 取绝对值大 一正一负 相加
+border-radius:上右下左
+border-radius:一半高度 圆角边框
+position:定位
+absolute 绝对 相对于有定位属性的父元素
+relative 相对 相对于自身位置移动
+fixed 固定定位 浏览器窗口
+sticky 粘性定位
+static 默认，静态
+float浮动、absolute定位 脱离文档流 不占用空间
+清除浮动写法：
+.clearfix::after{
+content:'';
+display:block; 转为块元素
+height:0;  高度为0
+visibility:hidden; 可见度不显示，隐藏                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+clear:both;  
+}
+.clearfix{
+zoom:1;
+}
+
+
+<div class="clearfix">::before xxx ::after</div>
+
+input type:text password checkbox radio reset submit button number image hideen
+color data range search email url tel
+<select name="" id="">
+    <option value="" selected>11</option>
+</select>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<input type="text" name="" placeholder="xxxxx" required value='xxs2' id="">
+<input type="radio" name="" checked disabled id="">
+<input type="number" name="" max="8" min="1" id="" readonly>
+父:
+
+display:flex;  设为弹性盒
+flex-direction（设置主轴方向/子元素的排列方向）:
+ row（默认，主轴为水平方向，子元素水平排列）,
+column（主轴为垂直方向，子元素垂直排列）,-reverse（翻转）
+flex-wrap（子元素是否换行）: wrap（换行）/
+nowrap（默认，不换行）、wrap-reverse（换行并翻转）
+justify-content（子元素主轴的对齐方式）:
+center（主轴的中心）, flex-start（默认，主轴的起始端开始，左-》右，上-》下）,
+flex-end（主轴的末端开始，右-》左，下->上）, 
+space-between（子元素两端对齐，中间有间距）, 
+space-around（两端有间距，子元素彼此间的间距是两端的两倍）,
+space-evenly（平均分配间距）
+align-items（当只有一根轴线时，子元素侧轴的对齐方式）: center（侧轴的中心） 
+flex-start（侧轴的起始端开始，左-》右，上-》下） 
+flex-end（侧轴的末尾端开始，右-》左，下-》上） 
+stretch（默认，拉伸元素适应容器）
+align-content（当有多根轴线时，子元素侧轴的对齐方式）:
+center（侧轴的中心） 
+flex-start（侧轴的起始端开始，左-》右，上-》下） 
+flex-end（侧轴的末端开始，右-》左，下-》上） 
+stretch（默认，拉伸元素适应容器） 
+space-between（子元素两端对齐，中间有间距）, 
+space-around（两端有间距，子元素距离是两端的二倍）,
+space-evenly（平均分配间距）
+flex-flow : row nowrap（flex-direction+flex-wrap综合写法,子元素水平排列，不换行）
+
+
+zi子:
+flex= flex-grow （扩大，默认为0，值越大，扩大比例越大）
+flex-shrink（收缩，默认为1，为0则恢复自身宽度） flex-basis（覆盖原本宽度）
+order（设置某个子元素的排列顺序，属性值为数值，数值越大，越靠后）
+align-self（子元素的对齐方式，IE-/苹果不支持）
+
+
+如何让子元素 水平垂直 居中于父元素
+A: 定位
+.father{
+width:400px;
+height:400px
+position: relative; 相对定位
+}
+.child{
+width:100px;
+height:80px;
+position: absolute; 绝对定位
+
+
+1:
+top:50%;
+left:50%;
+margin-left:-width/2
+margin-top:- height/2;
+2:
+margin:auto;
+top:0;
+bottom:0;
+left:0;
+right:0;
+B: flex 弹性盒
+.father{
+width:400px;
+height:400px
+display:flex;转为弹性盒
+justify-content:center;主轴中心对齐
+align-items: center;侧轴中心对齐
+}
+.child{
+width:100px;
+height:80px;
+}
+基本选择器 
+*（全局） div（标签） .xx（class） #xx（id） 
+a ~ b（兄弟） s+c（相邻） ,（群组） 空格（后代） >（子选择器）
+伪类选择器 :link（a标签访问前的样式） 
+:visited（a标签访问后的样式） 
+:hover（鼠标划过时的样式） 
+:active（鼠标点击时的样式） 
+:nth-child(找到第几个元素) :nth-of-type(找到同类型的第几个元素) ..
+:not(取反) :root{} ：disabled :enabled :checked
+
+伪元素选择器 ::placeholder （设置元素文字占位符的样式）
+::after（设置在元素后的内容） 
+:: before（设置在元素前的内容） 
+::first-letter（设置对象内的第一个字符的样式） 
+::first-line（设置对象内的第一行的样式） 
+::selection（设置元素被选择时的颜色）
+属性选择器 E[att]（找到具有att属性的e标签）
+E[att = 'v']（找到具有att属性并且数值是v的e标签） 
+E[att ~= 'v']（找到具有att属性属性值中包含v或仅有v的元素e） 
+E[att |= 'v']（找到以v开头，并且以-链接的字符串，仅有v也算）
+E[att ^= 'v']（找到具有att属性并且属性值以v开头的元素e） 
+E[att $= 'v']（找到具有att属性并且属性值以v结尾的元素e） 
+E[att *= 'v']（找到具有att属性并且属性值包含v的所有元素e）、
+
+私有前缀的用法：举例来说，一个CSS3圆角的代码是：
+-webkit-border-radius: 50%;
+-o-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+五大主流浏览器：
+名称:1 IE（Internet explorer）2 Opera Opera 3 safari safari 4 FF firefox 5 chrome chrome
+公司名:1 Microsoft微软        2 opear欧朋   3 Apple苹果    4 Mozilla 莫斯拉 5 Google 谷歌
+内核： 1 trident             2 presto      3webkit        4 Gecko       5 webkit
+私有前缀:1 -ms-              2 -o-         3 -webkit-      4 -moz-      5 -webkit-
+ -->

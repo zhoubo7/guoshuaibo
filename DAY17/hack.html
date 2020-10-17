@@ -1,0 +1,21 @@
+<!-- css hack 1. css BUG 与 CSS Hack 1. 为什么会出现bug CSS作为表现标准语言，需要在不同浏览器中实现表现层统一
+各大主流浏览器由于不同厂家开发，所有的核心架构和代码也很难重合
+各大厂商处于自身利益而设种种的技术壁垒
+2. CSS Hack是什么？
+一般指对程序或者系统进行非官方的修改
+或者说非官方的补丁 都被 成为Hack， CSS Hack可以理解为黑客程序，就是指一种改善CSS在不同浏览器下的表现形式和技巧、方法
+3. CSS Hack的副作用
+1、 降低了CSS代码的可读性
+2、 增加代码负担
+举例说明：
+1、margin属性在ie6中显示的距离会比其他浏览器中显示的距离宽2倍，也就是说margin-leɇ:20px; 在ie6中距左侧对象的实际显示距离是40px，而在非ie6中显示的距左侧对象的距离是设置的值20px;
+所以要想设置一个对象距离左侧对象的距离在所有浏览器中都显示是20px的宽度的样式应
+为：.kwstu{margin-leɇ:20px;_margin-leɇ:20px;}
+2.比如要分辨IE6和firefox两种浏览器，可以这样写：
+div { background:green;/*forfirefox*/ *background:red;/*forIE6*/(bothIE6&&IE7) }
+我在IE6中看到是红色的，在firefox中看到是绿色的。
+CSS Hack常见的有三种形式：
+CSS属性Hack、CSS选择符Hack以及IE条件注释Hack， Hack主要针对IE浏览器。
+1、属性级Hack：比如IE6能识别下划线“_”和星号“*”，IE7能识别星号“*”，但不能识别下划线”_ ”， 而firefox两个都不能认识。
+2、选择符级Hack：比如IE6能识别*html .class{}，IE7能识别*+html .class{}或者*:first-child+html .class{}。 3、IE条件注释Hack：IE条件注释是微软IE5开始就提供的一种非标准逻辑语句。比如针对所有IE： <!-[if IE]><!-您的代码-><![endif]>，针对IE6及以下版本：<!-[if it IE 7]><!-您的代码-><![endif]->，这类
+Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效 -->

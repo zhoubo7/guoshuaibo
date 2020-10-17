@@ -1,0 +1,74 @@
+<!-- 表格
+table
+表格
+属性
+width 
+height 
+border : 表格边框的宽度 
+只会改变表格外部边框，内部单元边框是不会改变的 
+align：表格在网页中的对齐方式 
+left center right 
+bgcolor: 表格的背景颜色 颜色名称 green... 
+十六进制颜色#fff
+rgb(255,255,255) 
+url : 'bg/bg.png'
+borderColor: 边框颜色 
+cellspacing ：单元格之间的间距，以及距表格边框的距离 
+设置为0 ，则单元格之间是0px 默认是2px 
+cellpadding ：单元格中内容与单元格的间距 默认1px 
+frame : 表格外边框 
+void ：不显示表格外边框 
+box / border：显示所有外边框 
+above : 显示顶部外边框 
+below : 显示底部外边框 
+lhs : 显示左侧外边框 
+rhs : 显示右侧外边框 
+hsides : 显示顶，底部外边框 
+visdes : 显示左，右侧外边框 
+rules：表格单元格边框 
+none ：不显示边框 
+all ：显示所有边框” 
+rows ：显示行之间的 线条 
+cols ： 显示列 之间的 线条 
+groups ： 显示行组 与 列组 之间的线条
+<caption></capation> 表格标题 
+属性
+align： 表格标题显示的位置 
+top: 默认 表格的上方 
+bottom: 表格的下方 
+right,left: Chrome和safari不支持 
+<thead></thead> 表格头部 
+<tbody></tbody> 表格主体内容 
+<tfoot></tfoot> 表格页脚/脚注内容 
+<tr></tr> 行标签 
+属性
+align : 表格每行中内容的水平对齐方式 
+right ：右对齐 
+left ：左对齐 
+默认 center : 居中对齐 
+justify : 进行伸展，每行长度相等 
+valign : 表格每行中内容的垂直对齐方式 
+top : 顶部对齐内容 
+middle ：垂直居中对齐内容 
+bottom ：底部对齐内容 
+baseline ：内容与基线对齐 
+bgcolor : 该行的背景颜色 
+子元素
+<th></th> : 表头单元格标签；显示为居中的粗体文本
+<td><td> : 普通单元格标签；左对齐的普通文本 
+th和td的属性 
+rowspan：单元格纵跨行数 
+colspan：单元格横跨列数 
+width:
+height：
+align: left | center | right 
+valign: top | middle | bottom 
+表格一像素边框 
+第一种方案 
+1. table背景颜色 bgcolor="#000" 
+2. 单元格间距 cellspacing="1px"
+3. 单元格背景颜色： bgcolor=" " 
+第二种方法 
+1. table 设置边框合并：border-collapse: collapse 合并边框/ separate： 边框独立
+第三种给table添加 rules="all" frame="box" borderColor="" 
+表格中属性与属性之间可能会有冲突 -->

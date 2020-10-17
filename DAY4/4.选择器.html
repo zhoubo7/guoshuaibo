@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<!-- * 基本选择器
+1 标签选择器 标签名{}
+2 class选择器 .名{}
+3 id 选择器 #名{}
+class 命名： 1 可以有多个,用空格隔开 如 class='a1 b2 c3'
+             2 可以重复命名
+id命名 ： 具有唯一性，一个html中只能有一个id名字，名字不能重复
+4 子选择器 父级元素 > 子元素
+5 后代选择器 祖先 后代 空格
+6 相邻选择器 兄弟a + 兄弟 ， 找到自身后面的第一个兄弟元素
+7 兄弟选择器 兄弟a ~ 兄弟 ， 找到自身后面的所有兄弟元素
+8 群组选则器 a, b, c.....
+9 全局选择器 *
+!-- ul 属性 type: disc 默认，实心圆 square 实心正方形 circle 空心圆 --> -->
+<!-- ol 属性 type: 1、i、I、a、A 。 start=''表示开始的数值
+        去掉li的默认样式： list-style: none; 
+        伪类选择器
+            E:hover 鼠标悬停时的样式
+            E:active 鼠标点击时（激活时）的样式
+            E:link  a标签访问前的样式
+            E:visited  a标签访问后的样式
+
+            E:first-child  （按顺序）找到第一个E， 找不到不生效
+            E:last-child   （按顺序）找到最后一个E， 找不到不生效
+            E:nth-child(n)  （按顺序）找到第n个E， 找不到不生效。    
+             odd-> 奇数 even->偶数
+            E:only-child    找到具有唯一性的元素，（只有自己一个元素，
+             没有其他兄弟元素）
+            E:first-of-type  找到同类型的第一个E元素
+            E:last-of-type   找到同类型的最后一个E元素
+          兄弟元素全部是同类型时2 用 nth-child/ first-child/last-child
+          兄弟元素不同类型时 用 。。-of-type
+          颜色值：
+            1 颜色的单词如red..
+            2 #开头， 3/6位组成 范围0-9 a-f 
+            3 rgb(,,) 范围 0-255
+                r ——-> red 红色
+                g ---》 green 绿色
+                b ----》 blue 蓝色
+            4 rgba(x,x,x,x)
+                r->red/  g->green/  b->blue
+                a->透明度 范围0（完全透明）- 1（不透明）
+           !-- label 标签， 用于扩大表单的选中范围：
+    使用方法：
+    将label 的for属性的值与input的id属性的值设为一致 -->
+<!-- 伪元素选择器
+E:first-letter/E::first-letter
+设置对象内的第一个字符的样式
+E:first-line/E::first-line
+设置对象内的第一行的样式
+E:after/E::after
+设置在元素后的内容，用来和content属性一起使用
+E:before/E::before
+设置在元素前的内容，用来和content属性一起使用
+E::placeholder (CSS3)
+设置元素文字占位符的样式
+E::selection
+设置元素被选择时的颜色
+ CSS优先级
+外部链接 < 内部 （在link之后）< 行内
+* < 标签 < 类选择器/伪类 < id选择器 < 行内 < important
+先后优先级： 后设置的相同属性会覆盖先设置的
+就近原则： * < 标签 < 类选择器/伪类 < id < 行内 < important
+层叠优先：越具体(权重值总和)的优先级越高，权重越高优先级越高，
+指定的大于继承的 !important
+CSS权重
+标签 ： 1
+类选择器 ： 10
+id选择器 ：100
+内联样式： 1000
+权重值会增加 （越具体的指定某个标签，权重越高），继承 ：0
+CSS层叠性与继承性
+层叠性
+多种CSS样式的叠加
+继承性
+书写CSS样式表时，子标记会继承父标记的某些样式
+恰当的使用继承性可简化代码，降低CSS的复杂性
+对于字体、文本属性等网页中通用的样式可以使用继承（字体、字号、颜色、行
+距等可以在body元素中统一设置，然后通过继承影响文档中所有文本）
+所有字相关的都可以继承，比如：color、text-系列、font-系列、line-系
+列、cursor
+并不是所有的CSS属性都可以继承（所有盒子相关的属性都不能继承）（a标签
+h1 标签不会实现继承）
+不具有继承性：边框、外边距、内边距、背景、定位、元素高属性 -->
